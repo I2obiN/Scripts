@@ -1,6 +1,5 @@
 #!/bin/sh
 
-# Angel.co URL scrape using WGET
 # Usage - ./spider.sh searchterm www.website.com
 
 ## Parameters
