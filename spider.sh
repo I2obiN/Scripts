@@ -25,7 +25,7 @@ echo "Please wait.. wget can take a while!" & echo " " &
 ## Infinite loop to continually process profile matches, while wget pulls in the site
 while [ $bool=true ]
  do
-    ## Assigns profile matches with the keyword to an array	
+    ## Assigns matches with the keyword to an array	
     PROFILES=($(grep -l -r "$search"))
   	for x in ${PROFILES[*]}
 	  do	
@@ -38,7 +38,7 @@ while [ $bool=true ]
 		killall bash && kill $$
 		}
 		
-		## Drops any clobber from URL
+		## Drops any clobber from URL -- Pretty important depending on the site layout/sitemap. If you're going to hit the same page multiple times you'll get "clobber" with WGET
 		x="$(echo $x | sed 's/.1//' | sed 's/.2//' | sed 's/.3//' | sed 's/?desktop//' | sed 's/?desktop=0//' | sed 's/?desktop=1//' | sed 's/?desktop=2//' | sed 's/=0//')"	
 
 		## If statement to check if profile is already in the queue (text file)
