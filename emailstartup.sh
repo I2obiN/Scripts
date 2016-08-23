@@ -8,3 +8,4 @@
 curl -s http://whatismijnip.nl | cut -d " " -f 5 | mutt -s "Your Subject" youremail@yahoo.com &&
 echo "WAN IP - Recovery Email sent!"
 # endline
+
