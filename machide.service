@@ -1,0 +1,12 @@
+[Unit]
+Description=MAC change script
+Before=network-pre.target
+Wants=network-pre.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/yourusername/macswap.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=network.target
