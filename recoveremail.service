@@ -1,0 +1,15 @@
+# systemd file for use with email script, or any once off init script that uses networking
+# place in /etc/systemd/system to run as root, or /etc/systemd/user to run for specific user
+
+[Unit]
+Description=WAN IP Email Script
+After=network-online.target
+Requires=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/username/emailstartup.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
