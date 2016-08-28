@@ -1,11 +1,18 @@
-#!/bin/sh
+#!/bin/sh -e
 
 # Startup script by I2obiN
 # Requires mutt setup -- sends your WAN IP to an email address
-# Add to crontab -e @reboot or for Ubuntu search "startup applications" and add the script file
 # NB: Yahoo will not let you send smtp emails from your free account, use gmail
 
-curl -s http://whatismijnip.nl | cut -d " " -f 5 | mutt -s "Your Subject" youremail@yahoo.com &&
-echo "WAN IP - Recovery Email sent!"
+sleep 30s
+SEND=$(curl -v -S http://whatismijnip.nl | cut -d ' ' -f 5 | mutt -s 'Your Subject' youremail@yahoo.com &&)
+echo "$SEND"
+  if [ $? -eq 0 ]
+    then
+      echo "Recovery Email Sent!"
+    else
+      echo "Goofed"  
+  fi
+  
+exit 0
 # endline
-
