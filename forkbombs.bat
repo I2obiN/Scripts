@@ -1,4 +1,4 @@
-rem Multicolor meme bomb, save to .bat -- safe, remove meme on line 9 to fuck up your shit though
+rem Multicolor meme bomb, save to .bat -- safe, remove rem on line 9 to fuck up your shit though
 @echo off 
 :b 
 SET m=%m%memes 
