@@ -1,3 +1,2 @@
-rem one liner forkbomb that will melt most systems
-rem /C instead of /K also works oddly enough
-for /L %g in (1,0,10) do ( start /I cmd.exe /K set /A m=m+1 )
+rem Chane to (1,0,10) for an infinite loop -- you've been warned
+for /L %g in (1,1,10) do ( start cmd.exe )
