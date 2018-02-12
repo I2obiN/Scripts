@@ -1,4 +1,4 @@
-// Takes array[x] and searches it for key
+// Takes 2d array and searches it for key
     function in_array_recursive($value, array $array) {
         $newArrays = []; // empty array for recursion
         if (is_array($array)) { // if array is an array
