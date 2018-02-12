@@ -1,3 +1,5 @@
+<?php
+
 // Takes 2d array and searches it for key
     function in_array_recursive($value, array $array) {
         $newArrays = []; // empty array for recursion
@@ -35,3 +37,5 @@
         // else return false
         return $foundBool;
     }
+
+?>
