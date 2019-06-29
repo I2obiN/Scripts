@@ -31,7 +31,7 @@
     $mail->SetFrom('thood@fakecomp.ie', 'Thomas Hood');
     $mail->addAddress('boomer@boomitup.com', 'Boomer, Baby');
 
-    $mail->Subject = 'Daily EU261 Claims Report';
+    $mail->Subject = 'Daily Boomer Report';
     $mail->Body    = "Hey Boomer, here is the report. Please contact thood@fakecomp.ie for any issues. Have a good day!";
     $mail->AltBody = "Hey Boomer, here is the report. Please contact thood@fakecomp.ie for any issues. Have a good day!";
 
